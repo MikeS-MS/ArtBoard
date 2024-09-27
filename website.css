@@ -1,0 +1,222 @@
+.main-content-container {
+    background-color: #4a4550;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    border-radius: 25px;
+}
+
+.account-icon {
+    background-color: #39323d;
+    padding: 5px 10px 5px 10px;
+    right: 5px;
+    border-radius: 25%;
+}
+
+.account-option:hover {
+    background-color: #625c66;
+}
+
+.account-option {
+    color: white;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-style: solid;
+    border-color: #625c66;
+    border-width: 2px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.account-options-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #39323d;
+}
+
+.account-options:hover .account-icon {
+    background-color: #4a4550;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.account-options:hover .account-options-content {
+    display: block;
+}
+
+.account-options {
+    right: 20px;
+}
+
+.search-bar-apply:hover {
+    background-color: #938a99;
+}
+
+.search-bar-apply {
+    background-color: #7b7380;
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    width: auto;
+    height: 100%;
+    padding: 8px 20px 10px 20px;
+    border-radius: 18px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.search-text-field:focus {
+    background-color: #6e6773;
+}
+
+.search-text-field {
+    position: absolute;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-style: none;
+    border-radius: 18px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: 48px;
+    width: 303px;
+    padding-left: 10px;
+    font-size: 1em;
+}
+
+.search-bar {
+    background-color: #625c66;
+    box-sizing: border-box;
+    width: 400px;
+    height: 60px;
+    right: 100px;
+    border-style: solid;
+    border-color: #39323d;
+    border-width: 5px;
+    border-radius: 25px;
+}
+
+.title:link {
+    text-decoration: none;
+}
+
+.title:visited {
+    text-decoration: none;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title:active {
+    text-decoration: none;
+}
+
+.title {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 3.5em;
+}
+
+.clickable-el:hover {
+    cursor: pointer;
+}
+
+.vertical-centered-el {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.horizontal-centered-el {
+    position: relative;
+    /* margin: 0; */
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.navbar {
+    position: fixed;
+    background-color: #403b46;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    height: 80px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.scroll-to-top img {
+    width: 30px;
+    height: 15px;
+}
+
+.scroll-to-top-show {
+    display: block !important;
+}
+
+.scroll-to-top {
+    display: none;
+    background-color: #524d59;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    border-style: solid;
+    border-color: #625c66;
+    border-width: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-style: none;
+}
+
+.background {
+    background-color: #39323d;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+@media only screen and (max-width: 1300px) {
+    .main-content-container {
+        top: 170px;
+
+    }
+
+    .search-bar {
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .title {
+        top: 10px;
+        transform: translateX(-50%);
+    }
+
+    .navbar {
+        height: 150px;
+
+    }
+
+}
