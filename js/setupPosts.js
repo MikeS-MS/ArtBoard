@@ -112,47 +112,53 @@ function LoadPosts() {
         "zoe-work1renderedconcept4png.jpg"
     ]
 
-    let images = [
-        "71cd9b3bd90aacb4b555ac9ca9015769.png",
-        "72c6c5d2891f05319e5cf67919ee384a-sample.jpg",
-        "72c9135c7dbdbc6a98a1bd67add108de-sample.jpg",
-        "74b167e5da40b272a3f737af8fca2b88.png",
-        "76a205fc463077305fdfdf1695f3e450-sample.jpg",
-        "76ed0da157c6c1d6522894b768381376.png",
-        "77e7128a68e8fdf3c6f6d9f4426a9eb8-sample.jpg",
-        "78e5c4a613a4050f1700cdbfec36c908-sample.jpg",
-        "79b64ed4-2e95-4e79-a5fd-4be6a2d7ef21.jpg",
-        "81d19f8bee1e60bc0de72675bb9d6ab9-sample.jpg",
-        "83fa8739077f56482869eea3991d23fe-sample.jpg",
-        "84dc125dfcdb344e27c0a04478aca08a-sample.jpg",
-        "85a156ef889bab66c8681b7365e8c348.jpg",
-        "85ea3d58a22034ccda7f37795347b6b1-sample.jpg",
-        "85ede73b189387f203c90819b72aa956.jpg",
-        "87b980568747a72d491b43111e62147b-sample.jpg",
-        "94d07d87-5ea0-4951-9a06-e5aef596e656.jpg",
-        "94f1101b81697026822242a85c741026.jpg",
-        "95a26712741fa550515091a4a97f9c7c-sample.jpg",
-        "95dd4d43c0e9d011e844f8b58e06983c-sample.jpg",
-        "96f6dd74a47385ba5ab80363b62e7c0d-sample.jpg",
-        "98a0dce125cca1a0d4150bbd5d91d724-sample.jpg",
-        "98bf2d720e7101223eb2d8da3f80ec80-sample.jpg",
-        "103d21813207bcd48ee5fc1df4d3cadf-sample.jpg",
-        "122a08d692cc2a09fe67d2964b68883e.png",
-        "131d1ed1388886588ddc9bc408a1a56a-sample.jpg",
-        "132c818011dbc288e09638704a63462d-sample.jpg",
-        "155a531ccf3b63b9eba7e01ab1bae434-sample.jpg"
-    ]
+    // let images = [
+    //     "71cd9b3bd90aacb4b555ac9ca9015769.png",
+    //     "72c6c5d2891f05319e5cf67919ee384a-sample.jpg",
+    //     "72c9135c7dbdbc6a98a1bd67add108de-sample.jpg",
+    //     "74b167e5da40b272a3f737af8fca2b88.png",
+    //     "76a205fc463077305fdfdf1695f3e450-sample.jpg",
+    //     "76ed0da157c6c1d6522894b768381376.png",
+    //     "77e7128a68e8fdf3c6f6d9f4426a9eb8-sample.jpg",
+    //     "78e5c4a613a4050f1700cdbfec36c908-sample.jpg",
+    //     "79b64ed4-2e95-4e79-a5fd-4be6a2d7ef21.jpg",
+    //     "81d19f8bee1e60bc0de72675bb9d6ab9-sample.jpg",
+    //     "83fa8739077f56482869eea3991d23fe-sample.jpg",
+    //     "84dc125dfcdb344e27c0a04478aca08a-sample.jpg",
+    //     "85a156ef889bab66c8681b7365e8c348.jpg",
+    //     "85ea3d58a22034ccda7f37795347b6b1-sample.jpg",
+    //     "85ede73b189387f203c90819b72aa956.jpg",
+    //     "87b980568747a72d491b43111e62147b-sample.jpg",
+    //     "94d07d87-5ea0-4951-9a06-e5aef596e656.jpg",
+    //     "94f1101b81697026822242a85c741026.jpg",
+    //     "95a26712741fa550515091a4a97f9c7c-sample.jpg",
+    //     "95dd4d43c0e9d011e844f8b58e06983c-sample.jpg",
+    //     "96f6dd74a47385ba5ab80363b62e7c0d-sample.jpg",
+    //     "98a0dce125cca1a0d4150bbd5d91d724-sample.jpg",
+    //     "98bf2d720e7101223eb2d8da3f80ec80-sample.jpg",
+    //     "103d21813207bcd48ee5fc1df4d3cadf-sample.jpg",
+    //     "122a08d692cc2a09fe67d2964b68883e.png",
+    //     "131d1ed1388886588ddc9bc408a1a56a-sample.jpg",
+    //     "132c818011dbc288e09638704a63462d-sample.jpg",
+    //     "155a531ccf3b63b9eba7e01ab1bae434-sample.jpg"
+    // ]
 
+    // shuffle(images);
     shuffle(actualImages);
 
     let titleNames = ["publication", "height", "extreme", "ignorant", "panic", "loot", "prey", "horn", "harbor", "claim", "single", "age", "kettle", "citizen", "coincide", "slam", "rest", "kit", "squash", "slow", "solid", "dull", "lamp", "note", "blade", "omission", "cope", "fuss"];
     shuffle(titleNames);
+
+    let authorNames = ["Carolyn Hartley", "Rosalie Pruitt", "Kelvin Michael", "Mark Schneider", "Eleanor Caldwell", "Stuart Cisneros", "Belle Villa", "Rodney Haney", "Freddie Conway", "Bushra Lucero", "Bella Calderon", "Hasnain Sparks", "Mollie Sloan", "Guy Glass", "Harold Oconnor", "Theresa Barron", "Lori Blanchard", "Reggie Short", "Annalise Baldwin", "Elena Garcia", "Gerald Colon", "Samira Dalton", "Kajus Carroll", "Elijah Pearce", "Leona Stein", "Aled Calhoun", "Joao Nunez", "Alia Ward"];
+    shuffle(authorNames);
 
     let containerElement = document.getElementsByClassName("posts-container")[0];
 
     for (let i = 0; i < actualImages.length; i++) {
         let fileName = actualImages[i];
         let title = titleNames[i];
+        let author = authorNames[i];
+
         title = title.charAt(0).toUpperCase() + title.slice(1);
 
         containerElement.innerHTML += `
@@ -164,6 +170,7 @@ function LoadPosts() {
                 <div class="post-short-info">
                     <div class="post-title-container">
                         <div class="post-title">${title}</div>
+                        <div class="post-author">${author}</div>
                     </div>
                     <div class="likes">
                         <img class="likes-icon" src="icons/heart-icon-empty.png" onclick="toggleHeart(event, this)">
