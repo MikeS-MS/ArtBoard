@@ -49,7 +49,8 @@
 }
 
 .account-options {
-    right: 20px;
+    /* position: relative; */
+    margin-left: 10px;
 }
 
 .search-bar-apply:hover {
@@ -59,7 +60,7 @@
 .search-bar-apply {
     background-color: #7b7380;
     box-sizing: border-box;
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     width: auto;
     height: 100%;
@@ -74,7 +75,6 @@
 }
 
 .search-text-field {
-    position: absolute;
     color: white;
     background-color: rgba(255, 255, 255, 0);
     outline: 0;
@@ -92,14 +92,25 @@
 
 .search-bar {
     background-color: #625c66;
+    position: relative;
+    display: flex;
     box-sizing: border-box;
     width: 400px;
     height: 60px;
-    right: 100px;
+    left: 0;
+    /* right: 10px; */
+    /* margin-right: 100px; */
     border-style: solid;
     border-color: #39323d;
     border-width: 5px;
     border-radius: 25px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    right: 10px;
+    height: 50px;
 }
 
 .title:link {
@@ -208,23 +219,24 @@ html {
 @media only screen and (max-width: 1300px) {
     .main-content-container {
         top: 170px;
-
     }
 
-    .search-bar {
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%);
+    .menu {
+        position: relative;
+        width: 100%;
+        object-fit: scale-down;
     }
 
     .title {
-        top: 10px;
-        transform: translateX(-50%);
+        position: relative;
+        text-align: center;
     }
 
     .navbar {
+        display: inline-grid;
+        gap: 5px;
+        justify-content: center;
         height: 150px;
-
     }
 
 }

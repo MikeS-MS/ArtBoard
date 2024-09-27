@@ -145,15 +145,6 @@
     background-color: #7b7380;
 }
 
-/* .post-click-element {
-    position: absolute;
-    border-radius: 25px;
-    border-top-right-radius: 0;
-    background-color: white;
-    width: 100%;
-    height: 100%;
-} */
-
 .post {
     background-color: #625c66;
     border-radius: 25px;
@@ -224,7 +215,7 @@
 }
 
 .tags-panel-button-line {
-    background-color: #524d59;
+    background-color: #7a7380;
     border-radius: 25px;
     width: 40px;
     height: 5px;
@@ -265,17 +256,6 @@
     left: 0;
     bottom: 0;
     transition: transform .5s linear;
-}
-
-@keyframes scale-down-post-thumbnail {
-    0% {
-        width: 90%;
-    }
-
-    100% {
-        width: 70%;
-    }
-
 }
 
 @media only screen and (max-width: 1300px) {
