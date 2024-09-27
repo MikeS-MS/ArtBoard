@@ -23,22 +23,22 @@ function toggleHeart(event, element) {
     event.stopPropagation();
 
     if (element.src.includes("heart-icon-full.png")) {
-        element.src = "heart-icon-empty.png";
+        element.src = "icons/heart-icon-empty.png";
         return;
     }
 
-    element.src = "heart-icon-full.png";
+    element.src = "icons/heart-icon-full.png";
 }
 
 function toggleBookmark(event, element) {
     event.stopPropagation();
 
     if (element.src.includes("bookmarks-icon-full")) {
-        element.src = "bookmarks-icon-empty.png";
+        element.src = "icons/bookmarks-icon-empty.png";
         return;
     }
 
-    element.src = "bookmarks-icon-full.png";
+    element.src = "icons/bookmarks-icon-full.png";
 }
 
 function toggleTagsPanel() {
@@ -159,19 +159,19 @@ function LoadPosts() {
             <div class="post clickable-el" onclick="clicked()">
                 <img class="post-thumbnail horizontal-centered-el" src="actual-images/${fileName}">
                 <div class="bookmark-container">
-                    <img src="bookmarks-icon-empty.png" onclick="toggleBookmark(event, this)">
+                    <img src="icons/bookmarks-icon-empty.png" onclick="toggleBookmark(event, this)">
                 </div>
                 <div class="post-short-info">
                     <div class="post-title-container">
                         <div class="post-title">${title}</div>
                     </div>
                     <div class="likes">
-                        <img class="likes-icon" src="heart-icon-empty.png" onclick="toggleHeart(event, this)">
+                        <img class="likes-icon" src="icons/heart-icon-empty.png" onclick="toggleHeart(event, this)">
                         <div class="likes-amount">${parseInt(getRandomInt(100000))}</div>
                     </div>
                     <div class="comments">
                         <div class="comments-amount">${parseInt(getRandomInt(100000))}</div>
-                        <img class="comments-icon" src="comment-icon.png">
+                        <img class="comments-icon" src="icons/comment-icon.png">
                     </div>
                 </div>
             </div>
