@@ -138,7 +138,7 @@
 }
 
 .page-item-container {
-    display: inline-grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     background-color: #524d59;
@@ -147,11 +147,19 @@
     height: 50px;
 }
 
+.pages-container-scroll {
+    position: fixed !important;
+    top: 60px !important;
+}
+
 .pages-container {
-    position: sticky;
+    display: grid;
+    position: relative;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    gap: 5px;
     background-color: #403b46;
     z-index: 9999;
-    top: 80px;
+    top: 20px;
     margin-top: 20px;
     padding: 5px;
     border-radius: 15px;
@@ -225,8 +233,8 @@
 
 @media only screen and (max-width: 1300px) {
 
-    .pages-container {
-        top: 150px;
+    .pages-container-scroll {
+        top: 130px !important;
     }
 
     .tags-panel-container {

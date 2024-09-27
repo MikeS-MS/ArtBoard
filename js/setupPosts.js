@@ -190,12 +190,19 @@ window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
     let mybutton = document.getElementsByClassName("scroll-to-top")[0];
-
+    let pagesContainer = document.getElementsByClassName("pages-container")[0];
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "flex";
 
     } else {
         mybutton.style.display = "none";
+    }
+
+    if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        pagesContainer.classList.add("pages-container-scroll");
+    }
+    else {
+        pagesContainer.classList.remove("pages-container-scroll");
     }
 }
 
