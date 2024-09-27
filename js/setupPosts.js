@@ -163,18 +163,25 @@ function LoadPosts() {
 
         containerElement.innerHTML += `
             <div class="post clickable-el" onclick="clicked()">
-                <img class="post-thumbnail horizontal-centered-el" src="actual-images/${fileName}">
-                <div class="bookmark-container">
-                    <img src="icons/bookmarks-icon-empty.png" onclick="toggleBookmark(event, this)">
+                <img class="post-thumbnail-preview" src="actual-images/${fileName}">
+                <div class="post-thumbnail-container horizontal-centered-el">
+                    <img class="post-thumbnail horizontal-centered-el" src="actual-images/${fileName}">
                 </div>
+
                 <div class="post-short-info">
                     <div class="post-title-container">
                         <div class="post-title">${title}</div>
                         <div class="post-author">${author}</div>
                     </div>
-                    <div class="likes">
-                        <img class="likes-icon" src="icons/heart-icon-empty.png" onclick="toggleHeart(event, this)">
-                        <div class="likes-amount">${parseInt(getRandomInt(100000))}</div>
+                    <div class="like-and-bookmark-container">
+                        <div class="bookmarks">
+                            <img class="bookmarks-icon" src="icons/bookmarks-icon-empty.png" onclick="toggleBookmark(event, this)">
+                            <div class="bookmarks-amount">${parseInt(getRandomInt(100000))}</div>
+                        </div>
+                        <div class="likes">
+                            <img class="likes-icon" src="icons/heart-icon-empty.png" onclick="toggleHeart(event, this)">
+                            <div class="likes-amount">${parseInt(getRandomInt(100000))}</div>
+                        </div>
                     </div>
                     <div class="comments">
                         <div class="comments-amount">${parseInt(getRandomInt(100000))}</div>

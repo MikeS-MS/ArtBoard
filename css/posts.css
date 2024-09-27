@@ -31,12 +31,37 @@
 
 .likes {
     display: flex;
-    justify-content: left;
     align-items: center;
+    justify-content: left;
+}
 
+.bookmarks-amount {
+    display: inline-block;
+    color: white;
+    margin-left: 5px;
+}
+
+.bookmarks-icon {
+    height: 25px;
+    width: 17px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.bookmarks {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+}
+
+.like-and-bookmark-container {
+    display: inline-grid;
+    gap: 5px;
     position: absolute;
     left: 10px;
     bottom: 20px;
+    height: fit-content;
 }
 
 .post-author {
@@ -57,19 +82,40 @@
     background-color: #524d59;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    height: 25%;
+    height: 30%;
+}
+
+.post-thumbnail-preview {
+    display: none;
+    position: absolute;
+    box-sizing: border-box;
+    border: solid #7a7380;
+    border-width: 10px;
+    border-radius: 25px;
+    z-index: 9998;
+    max-height: 70%;
+    left: 50%;
+    bottom: 30%;
+    transform: translateX(-50%);
 }
 
 .post-thumbnail {
     border-color: #7b7380;
     border-radius: 25px;
-    width: 90%;
-    height: 75%;
     margin-top: 10px;
+    height: 90%;
+    width: 90%;
     object-fit: cover;
 }
 
-.bookmark-container {
+.post-thumbnail-container {
+    height: 70%;
+    width: 90%;
+    object-fit: cover;
+    position: relative;
+}
+
+/* .bookmark-container {
     position: absolute;
     background-color: #625c66;
     top: 0;
@@ -77,23 +123,25 @@
     border-bottom-left-radius: 18px;
     padding-left: 5px;
     padding-bottom: 2px;
-}
+} */
 
 .post:hover .post-short-info {
     background-color: #625c66;
 }
 
-.post:hover .post-thumbnail {
-    width: 70%;
-    object-fit: scale-down;
-    border-radius: 0;
-}
-
-.post:hover .bookmark-container {
+.post:hover {
     background-color: #7b7380;
 }
 
-.post:hover {
+.post:hover .post-thumbnail {
+    display: none;
+}
+
+.post:hover .post-thumbnail-preview {
+    display: block;
+}
+
+.post:hover .bookmark-container {
     background-color: #7b7380;
 }
 
@@ -109,7 +157,6 @@
 .post {
     background-color: #625c66;
     border-radius: 25px;
-    border-top-right-radius: 0;
     width: 300px;
     height: 400px;
     display: inline-block;
@@ -155,9 +202,9 @@
 .pages-container {
     display: grid;
     position: relative;
+    background-color: #403b46;
     grid-template-columns: 50px 50px 50px 50px 50px;
     gap: 5px;
-    background-color: #403b46;
     z-index: 9999;
     top: 20px;
     margin-top: 20px;
